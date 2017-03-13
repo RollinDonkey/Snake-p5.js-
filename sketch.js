@@ -1,15 +1,12 @@
 var snake;
 var food;
 var total = 0;
-var keyArrey = [];
-var demo;
 
 function setup() {
     createCanvas(600, 600);
     snake = new Snake();
     frameRate(10);
     pickLocation();
-    demo = select('#demo');
 }
 
 function draw() {
@@ -36,15 +33,11 @@ function pickLocation() {
 function keyPressed() {
     if (keyCode === UP_ARROW) {
         snake.move(0, -1);
-        keyArrey.push(UP_ARROW);
     } else if (keyCode === RIGHT_ARROW) {
         snake.move(1, 0);
-        keyArrey.push(RIGHT_ARROW);
     } else if (keyCode === DOWN_ARROW) {
         snake.move(0, 1);
-        keyArrey.push(DOWN_ARROW);
     } else if (keyCode === LEFT_ARROW) {
         snake.move(-1, 0);
-        keyArrey.push(LEFT_ARROW);
     }
 }
